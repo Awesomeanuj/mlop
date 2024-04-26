@@ -15,7 +15,7 @@ jobs:
       uses: actions/checkout@v2
      
     - name: Login to Docker Hub
-      run: echo "${{ secrets.MLOPPASS }}" | docker login -u awesomeanuj --password-stdin
+      run: echo "${{ secrets.MLOPSITEPASS }}" | docker login -u awesomeanuj --password-stdin
    
     - name: Build Docker image
       run: docker build -t awesomeanuj/mlop:latest .
